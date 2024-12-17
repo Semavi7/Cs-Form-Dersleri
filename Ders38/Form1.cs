@@ -27,6 +27,9 @@ namespace Ders38
             rb.durum = 's';
             rb.YIL = -2016;
             rb.MARKASI = "Golf";
+            rb.plaka = "34 Aİ 1881";
+            rb.muayene = 2017;
+            rb.sahip = "Zübeyde Hanım";
 
             label1.Text = rb.renk;
             label2.Text = rb.hiz.ToString();
@@ -35,6 +38,9 @@ namespace Ders38
             label5.Text = rb.durum.ToString();
             label6.Text = rb.YIL.ToString();
             label7.Text = rb.MARKASI.ToString();
+            label8.Text = rb.plaka;
+            label9.Text = rb.muayene.ToString();
+            label10.Text = rb.sahip;
             pictureBox1.BackColor = Color.Red;
         }
     }

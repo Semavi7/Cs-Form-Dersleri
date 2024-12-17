@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Ders38
 {
-    internal class Araba
+    internal class Araba:ArabaDetay
     {
         public string renk;
         public int hiz;
