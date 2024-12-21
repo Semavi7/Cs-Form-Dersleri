@@ -11,7 +11,7 @@ using System.Data.SqlClient;
 
 namespace Ders56
 {
-    public partial class Form1 : Form
+    public partial class FrmAnaForm : Form
     {
         SqlConnection baglantı = new SqlConnection("Data Source=DESKTOP-6CFTTSA\\SQLEXPRESS;Initial Catalog=Personelveritabani;Integrated Security=True");
 
@@ -27,7 +27,7 @@ namespace Ders56
             radioButton2.Checked = false;
             Txtad.Focus();
         }
-        public Form1()
+        public FrmAnaForm()
         {
             InitializeComponent();
         }
@@ -105,6 +105,38 @@ namespace Ders56
             {
                 radioButton2.Checked = true;
             }
+        }
+
+        private void Btnsil_Click(object sender, EventArgs e)
+        {
+            baglantı.Open();
+            SqlCommand komutsil = new SqlCommand("Delete From Tbl_Personel where Perid=@k1", baglantı);
+            komutsil.Parameters.AddWithValue("@k1",Txtid.Text);
+            komutsil.ExecuteNonQuery();
+            baglantı.Close();
+            MessageBox.Show("Kayıt Silindi");
+        }
+
+        private void Btnguncelle_Click(object sender, EventArgs e)
+        {
+            baglantı.Open();
+            SqlCommand komutguncelle = new SqlCommand("Update Tbl_Personel Set Perad=@a1,Persoyad=@a2,Persehir=@a3,Permaas=@a4,Perdurum=@a5,Permeslek=@a6 where Perid=@a7", baglantı);
+            komutguncelle.Parameters.AddWithValue("@a1", Txtad.Text);
+            komutguncelle.Parameters.AddWithValue("@a2", Txtsoyad.Text);
+            komutguncelle.Parameters.AddWithValue("@a3", Cmbsehir.Text);
+            komutguncelle.Parameters.AddWithValue("@a4", Mskmaas.Text);
+            komutguncelle.Parameters.AddWithValue("@a5", label8.Text);
+            komutguncelle.Parameters.AddWithValue("@a6", Txtmeslek.Text);
+            komutguncelle.Parameters.AddWithValue("@a7", Txtid.Text);
+            komutguncelle.ExecuteNonQuery();
+            baglantı.Close();
+            MessageBox.Show("Personel Bilgi Güncellendi");
+        }
+
+        private void Btnistatislik_Click(object sender, EventArgs e)
+        {
+            Frmİstatistik fr = new Frmİstatistik();
+            fr.Show();
         }
     }
 }
