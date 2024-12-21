@@ -138,5 +138,11 @@ namespace Ders56
             Frmİstatistik fr = new Frmİstatistik();
             fr.Show();
         }
+
+        private void Btngrafikler_Click(object sender, EventArgs e)
+        {
+            FrmGrafikler frmGrafikler = new FrmGrafikler();
+            frmGrafikler.Show();
+        }
     }
 }

@@ -45,7 +45,7 @@
             // LblToplamPersonel
             // 
             this.LblToplamPersonel.AutoSize = true;
-            this.LblToplamPersonel.Location = new System.Drawing.Point(247, 22);
+            this.LblToplamPersonel.Location = new System.Drawing.Point(250, 22);
             this.LblToplamPersonel.Name = "LblToplamPersonel";
             this.LblToplamPersonel.Size = new System.Drawing.Size(22, 24);
             this.LblToplamPersonel.TabIndex = 1;
@@ -54,7 +54,7 @@
             // LblEvliPersonel
             // 
             this.LblEvliPersonel.AutoSize = true;
-            this.LblEvliPersonel.Location = new System.Drawing.Point(247, 62);
+            this.LblEvliPersonel.Location = new System.Drawing.Point(250, 62);
             this.LblEvliPersonel.Name = "LblEvliPersonel";
             this.LblEvliPersonel.Size = new System.Drawing.Size(22, 24);
             this.LblEvliPersonel.TabIndex = 3;
@@ -63,7 +63,7 @@
             // LblBekarPersonel
             // 
             this.LblBekarPersonel.AutoSize = true;
-            this.LblBekarPersonel.Location = new System.Drawing.Point(247, 102);
+            this.LblBekarPersonel.Location = new System.Drawing.Point(250, 102);
             this.LblBekarPersonel.Name = "LblBekarPersonel";
             this.LblBekarPersonel.Size = new System.Drawing.Size(22, 24);
             this.LblBekarPersonel.TabIndex = 5;
@@ -72,7 +72,7 @@
             // LblSehirSayısı
             // 
             this.LblSehirSayısı.AutoSize = true;
-            this.LblSehirSayısı.Location = new System.Drawing.Point(247, 142);
+            this.LblSehirSayısı.Location = new System.Drawing.Point(250, 142);
             this.LblSehirSayısı.Name = "LblSehirSayısı";
             this.LblSehirSayısı.Size = new System.Drawing.Size(22, 24);
             this.LblSehirSayısı.TabIndex = 7;
@@ -81,7 +81,7 @@
             // LblToplamMaas
             // 
             this.LblToplamMaas.AutoSize = true;
-            this.LblToplamMaas.Location = new System.Drawing.Point(247, 182);
+            this.LblToplamMaas.Location = new System.Drawing.Point(250, 182);
             this.LblToplamMaas.Name = "LblToplamMaas";
             this.LblToplamMaas.Size = new System.Drawing.Size(22, 24);
             this.LblToplamMaas.TabIndex = 9;
@@ -90,7 +90,7 @@
             // LblOrtalamaMaas
             // 
             this.LblOrtalamaMaas.AutoSize = true;
-            this.LblOrtalamaMaas.Location = new System.Drawing.Point(247, 222);
+            this.LblOrtalamaMaas.Location = new System.Drawing.Point(250, 222);
             this.LblOrtalamaMaas.Name = "LblOrtalamaMaas";
             this.LblOrtalamaMaas.Size = new System.Drawing.Size(22, 24);
             this.LblOrtalamaMaas.TabIndex = 11;
@@ -154,8 +154,9 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.Color.OliveDrab;
-            this.ClientSize = new System.Drawing.Size(333, 293);
+            this.ClientSize = new System.Drawing.Size(434, 293);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -169,7 +170,7 @@
             this.Controls.Add(this.LblEvliPersonel);
             this.Controls.Add(this.LblToplamPersonel);
             this.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Frmİstatistik";
             this.Text = "Frmİstatistik";
             this.Load += new System.EventHandler(this.Frmİstatistik_Load);

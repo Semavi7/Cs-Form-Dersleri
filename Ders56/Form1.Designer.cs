@@ -257,6 +257,7 @@
             this.Btngrafikler.TabIndex = 6;
             this.Btngrafikler.Text = "Grafikler";
             this.Btngrafikler.UseVisualStyleBackColor = true;
+            this.Btngrafikler.Click += new System.EventHandler(this.Btngrafikler_Click);
             // 
             // Btnistatislik
             // 
