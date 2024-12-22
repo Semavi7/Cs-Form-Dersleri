@@ -68,6 +68,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tbl_PersonelTableAdapter = new Ders56.PersonelveritabaniDataSetTableAdapters.Tbl_PersonelTableAdapter();
             this.label8 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -444,12 +445,23 @@
             this.label8.Visible = false;
             this.label8.TextChanged += new System.EventHandler(this.label8_TextChanged);
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(615, 306);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(118, 28);
+            this.button1.TabIndex = 205;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // FrmAnaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(180)))), ((int)(((byte)(100)))));
             this.ClientSize = new System.Drawing.Size(955, 576);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox3);
@@ -513,6 +525,7 @@
         private System.Windows.Forms.DataGridViewCheckBoxColumn perdurumDataGridViewCheckBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn permeslekDataGridViewTextBoxColumn;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button button1;
     }
 }
 

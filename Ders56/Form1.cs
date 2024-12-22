@@ -144,5 +144,11 @@ namespace Ders56
             FrmGrafikler frmGrafikler = new FrmGrafikler();
             frmGrafikler.Show();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form2 frp = new Form2();
+            frp.Show();
+        }
     }
 }
