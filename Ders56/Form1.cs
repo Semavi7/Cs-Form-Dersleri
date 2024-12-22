@@ -39,6 +39,8 @@ namespace Ders56
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'personelveritabaniDataSet2.iller' table. You can move, or remove it, as needed.
+            this.illerTableAdapter.Fill(this.personelveritabaniDataSet2.iller);
             this.tbl_PersonelTableAdapter.Fill(this.personelveritabaniDataSet.Tbl_Personel);
         }
 

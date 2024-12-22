@@ -47,6 +47,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.Btngrafikler = new System.Windows.Forms.Button();
             this.Btnistatislik = new System.Windows.Forms.Button();
             this.Btntemizle = new System.Windows.Forms.Button();
@@ -68,7 +69,9 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tbl_PersonelTableAdapter = new Ders56.PersonelveritabaniDataSetTableAdapters.Tbl_PersonelTableAdapter();
             this.label8 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.personelveritabaniDataSet2 = new Ders56.PersonelveritabaniDataSet2();
+            this.illerBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.illerTableAdapter = new Ders56.PersonelveritabaniDataSet2TableAdapters.illerTableAdapter();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -76,6 +79,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.tblPersonelBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.personelveritabaniDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.personelveritabaniDataSet2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.illerBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -137,11 +142,14 @@
             // 
             // Cmbsehir
             // 
+            this.Cmbsehir.DataSource = this.illerBindingSource;
+            this.Cmbsehir.DisplayMember = "sehir";
             this.Cmbsehir.FormattingEnabled = true;
             this.Cmbsehir.Location = new System.Drawing.Point(143, 158);
             this.Cmbsehir.Name = "Cmbsehir";
             this.Cmbsehir.Size = new System.Drawing.Size(169, 32);
             this.Cmbsehir.TabIndex = 3;
+            this.Cmbsehir.ValueMember = "id";
             // 
             // Txtmeslek
             // 
@@ -250,6 +258,16 @@
             this.groupBox2.TabIndex = 201;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "İşlemler";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(29, 300);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(175, 32);
+            this.button1.TabIndex = 205;
+            this.button1.Text = "Raporlar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Btngrafikler
             // 
@@ -446,15 +464,19 @@
             this.label8.Visible = false;
             this.label8.TextChanged += new System.EventHandler(this.label8_TextChanged);
             // 
-            // button1
+            // personelveritabaniDataSet2
             // 
-            this.button1.Location = new System.Drawing.Point(29, 300);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(175, 32);
-            this.button1.TabIndex = 205;
-            this.button1.Text = "Raporlar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.personelveritabaniDataSet2.DataSetName = "PersonelveritabaniDataSet2";
+            this.personelveritabaniDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // illerBindingSource
+            // 
+            this.illerBindingSource.DataMember = "iller";
+            this.illerBindingSource.DataSource = this.personelveritabaniDataSet2;
+            // 
+            // illerTableAdapter
+            // 
+            this.illerTableAdapter.ClearBeforeFill = true;
             // 
             // FrmAnaForm
             // 
@@ -480,6 +502,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.tblPersonelBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.personelveritabaniDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.personelveritabaniDataSet2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.illerBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -526,6 +550,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn permeslekDataGridViewTextBoxColumn;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button button1;
+        private PersonelveritabaniDataSet2 personelveritabaniDataSet2;
+        private System.Windows.Forms.BindingSource illerBindingSource;
+        private PersonelveritabaniDataSet2TableAdapters.illerTableAdapter illerTableAdapter;
     }
 }
 
