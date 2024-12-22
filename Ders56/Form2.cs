@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.Reporting.WinForms;
 
 namespace Ders56
 {
@@ -19,10 +20,8 @@ namespace Ders56
 
         private void Form2_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'personelveritabaniDataSet.Tbl_Personel' table. You can move, or remove it, as needed.
             this.tbl_PersonelTableAdapter1.Fill(this.personelveritabaniDataSet.Tbl_Personel);
-            // TODO: This line of code loads data into the 'personelveritabaniDataSet.Tbl_Personel' table. You can move, or remove it, as needed.
-            this.tbl_PersonelTableAdapter1.Fill(this.personelveritabaniDataSet.Tbl_Personel);
+            this.ReportViewer1.RefreshReport();
 
         }
     }

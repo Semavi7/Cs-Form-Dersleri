@@ -236,6 +236,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.button1);
             this.groupBox2.Controls.Add(this.Btngrafikler);
             this.groupBox2.Controls.Add(this.Btnistatislik);
             this.groupBox2.Controls.Add(this.Btntemizle);
@@ -252,7 +253,7 @@
             // 
             // Btngrafikler
             // 
-            this.Btngrafikler.Location = new System.Drawing.Point(29, 272);
+            this.Btngrafikler.Location = new System.Drawing.Point(29, 262);
             this.Btngrafikler.Name = "Btngrafikler";
             this.Btngrafikler.Size = new System.Drawing.Size(175, 32);
             this.Btngrafikler.TabIndex = 6;
@@ -262,7 +263,7 @@
             // 
             // Btnistatislik
             // 
-            this.Btnistatislik.Location = new System.Drawing.Point(29, 234);
+            this.Btnistatislik.Location = new System.Drawing.Point(29, 224);
             this.Btnistatislik.Name = "Btnistatislik";
             this.Btnistatislik.Size = new System.Drawing.Size(175, 32);
             this.Btnistatislik.TabIndex = 5;
@@ -272,7 +273,7 @@
             // 
             // Btntemizle
             // 
-            this.Btntemizle.Location = new System.Drawing.Point(29, 196);
+            this.Btntemizle.Location = new System.Drawing.Point(29, 186);
             this.Btntemizle.Name = "Btntemizle";
             this.Btntemizle.Size = new System.Drawing.Size(175, 32);
             this.Btntemizle.TabIndex = 4;
@@ -282,7 +283,7 @@
             // 
             // Btnguncelle
             // 
-            this.Btnguncelle.Location = new System.Drawing.Point(29, 158);
+            this.Btnguncelle.Location = new System.Drawing.Point(29, 148);
             this.Btnguncelle.Name = "Btnguncelle";
             this.Btnguncelle.Size = new System.Drawing.Size(175, 32);
             this.Btnguncelle.TabIndex = 3;
@@ -292,7 +293,7 @@
             // 
             // Btnsil
             // 
-            this.Btnsil.Location = new System.Drawing.Point(29, 120);
+            this.Btnsil.Location = new System.Drawing.Point(29, 110);
             this.Btnsil.Name = "Btnsil";
             this.Btnsil.Size = new System.Drawing.Size(175, 32);
             this.Btnsil.TabIndex = 2;
@@ -302,7 +303,7 @@
             // 
             // Btnkaydet
             // 
-            this.Btnkaydet.Location = new System.Drawing.Point(29, 81);
+            this.Btnkaydet.Location = new System.Drawing.Point(29, 71);
             this.Btnkaydet.Name = "Btnkaydet";
             this.Btnkaydet.Size = new System.Drawing.Size(175, 33);
             this.Btnkaydet.TabIndex = 1;
@@ -312,7 +313,7 @@
             // 
             // Btnlistele
             // 
-            this.Btnlistele.Location = new System.Drawing.Point(29, 42);
+            this.Btnlistele.Location = new System.Drawing.Point(29, 32);
             this.Btnlistele.Name = "Btnlistele";
             this.Btnlistele.Size = new System.Drawing.Size(175, 33);
             this.Btnlistele.TabIndex = 0;
@@ -447,11 +448,11 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(615, 306);
+            this.button1.Location = new System.Drawing.Point(29, 300);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(118, 28);
+            this.button1.Size = new System.Drawing.Size(175, 32);
             this.button1.TabIndex = 205;
-            this.button1.Text = "button1";
+            this.button1.Text = "Raporlar";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -461,7 +462,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(180)))), ((int)(((byte)(100)))));
             this.ClientSize = new System.Drawing.Size(955, 576);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.groupBox3);
