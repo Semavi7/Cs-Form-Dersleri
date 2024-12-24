@@ -93,40 +93,40 @@
             this.label1.Font = new System.Drawing.Font("Edwardian Script ITC", 60F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(22, 13);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(651, 118);
+            this.label1.Size = new System.Drawing.Size(521, 94);
             this.label1.TabIndex = 4;
             this.label1.Text = "Sea Green Hospital";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(61, 311);
+            this.label2.Location = new System.Drawing.Point(71, 311);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(111, 24);
+            this.label2.Size = new System.Drawing.Size(87, 18);
             this.label2.TabIndex = 5;
             this.label2.Text = "Hasta Giriş";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(289, 311);
+            this.label3.Location = new System.Drawing.Point(303, 311);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(122, 24);
+            this.label3.Size = new System.Drawing.Size(95, 18);
             this.label3.TabIndex = 6;
             this.label3.Text = "Doktor Giriş";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(529, 311);
+            this.label4.Location = new System.Drawing.Point(545, 311);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(134, 24);
+            this.label4.Size = new System.Drawing.Size(108, 18);
             this.label4.TabIndex = 7;
             this.label4.Text = "Sekreter Giriş";
             // 
             // FrmGirisler
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.SeaGreen;

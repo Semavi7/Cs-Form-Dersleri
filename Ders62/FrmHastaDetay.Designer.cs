@@ -71,18 +71,18 @@
             // LblAdSoyad
             // 
             this.LblAdSoyad.AutoSize = true;
-            this.LblAdSoyad.Location = new System.Drawing.Point(144, 71);
+            this.LblAdSoyad.Location = new System.Drawing.Point(125, 71);
             this.LblAdSoyad.Name = "LblAdSoyad";
-            this.LblAdSoyad.Size = new System.Drawing.Size(93, 24);
+            this.LblAdSoyad.Size = new System.Drawing.Size(70, 18);
             this.LblAdSoyad.TabIndex = 3;
             this.LblAdSoyad.Text = "Null Null";
             // 
             // LblTC
             // 
             this.LblTC.AutoSize = true;
-            this.LblTC.Location = new System.Drawing.Point(144, 35);
+            this.LblTC.Location = new System.Drawing.Point(125, 35);
             this.LblTC.Name = "LblTC";
-            this.LblTC.Size = new System.Drawing.Size(142, 24);
+            this.LblTC.Size = new System.Drawing.Size(118, 18);
             this.LblTC.TabIndex = 2;
             this.LblTC.Text = "00000000000";
             // 
@@ -91,16 +91,16 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(35, 71);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(103, 24);
+            this.label2.Size = new System.Drawing.Size(84, 18);
             this.label2.TabIndex = 1;
             this.label2.Text = "Ad Soyad :";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 35);
+            this.label1.Location = new System.Drawing.Point(16, 35);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(132, 24);
+            this.label1.Size = new System.Drawing.Size(103, 18);
             this.label1.TabIndex = 0;
             this.label1.Text = "TC Kimli No :";
             // 
@@ -126,7 +126,7 @@
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.Location = new System.Drawing.Point(4, 285);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(86, 48);
+            this.linkLabel1.Size = new System.Drawing.Size(65, 36);
             this.linkLabel1.TabIndex = 7;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Bilgileri \r\nDüzenle";
@@ -153,7 +153,7 @@
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Location = new System.Drawing.Point(96, 70);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(207, 32);
+            this.comboBox2.Size = new System.Drawing.Size(207, 26);
             this.comboBox2.TabIndex = 4;
             // 
             // CmbBrans
@@ -161,7 +161,7 @@
             this.CmbBrans.FormattingEnabled = true;
             this.CmbBrans.Location = new System.Drawing.Point(96, 33);
             this.CmbBrans.Name = "CmbBrans";
-            this.CmbBrans.Size = new System.Drawing.Size(207, 32);
+            this.CmbBrans.Size = new System.Drawing.Size(207, 26);
             this.CmbBrans.TabIndex = 3;
             // 
             // label8
@@ -169,25 +169,25 @@
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(6, 106);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(86, 24);
+            this.label8.Size = new System.Drawing.Size(70, 18);
             this.label8.TabIndex = 2;
             this.label8.Text = "Şikayet :";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(8, 73);
+            this.label7.Location = new System.Drawing.Point(10, 73);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(84, 24);
+            this.label7.Size = new System.Drawing.Size(66, 18);
             this.label7.TabIndex = 1;
             this.label7.Text = "Doktor :";
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(17, 36);
+            this.label6.Location = new System.Drawing.Point(18, 36);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(73, 24);
+            this.label6.Size = new System.Drawing.Size(58, 18);
             this.label6.TabIndex = 0;
             this.label6.Text = "Branş :";
             // 
@@ -205,11 +205,11 @@
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 26);
+            this.dataGridView1.Location = new System.Drawing.Point(3, 22);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(623, 242);
+            this.dataGridView1.Size = new System.Drawing.Size(623, 246);
             this.dataGridView1.TabIndex = 0;
             // 
             // groupBox4
@@ -226,16 +226,16 @@
             // 
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView2.Location = new System.Drawing.Point(3, 26);
+            this.dataGridView2.Location = new System.Drawing.Point(3, 22);
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersWidth = 51;
             this.dataGridView2.RowTemplate.Height = 24;
-            this.dataGridView2.Size = new System.Drawing.Size(623, 174);
+            this.dataGridView2.Size = new System.Drawing.Size(623, 178);
             this.dataGridView2.TabIndex = 0;
             // 
             // FrmHastaDetay
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkGreen;
             this.ClientSize = new System.Drawing.Size(996, 504);
