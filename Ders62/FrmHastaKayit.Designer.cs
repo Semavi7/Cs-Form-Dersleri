@@ -28,19 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmHastaKayit));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.TxtAd = new System.Windows.Forms.TextBox();
+            this.TxtSoyad = new System.Windows.Forms.TextBox();
+            this.MskTC = new System.Windows.Forms.MaskedTextBox();
+            this.MskTelefon = new System.Windows.Forms.MaskedTextBox();
+            this.TxtSifre = new System.Windows.Forms.TextBox();
+            this.CmbCinsiyet = new System.Windows.Forms.ComboBox();
+            this.BtnKayıtYap = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -98,74 +99,81 @@
             this.label6.Text = "Cinsiyet :";
             this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
-            // textBox1
+            // TxtAd
             // 
-            this.textBox1.Location = new System.Drawing.Point(161, 14);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(173, 30);
-            this.textBox1.TabIndex = 6;
+            this.TxtAd.Location = new System.Drawing.Point(161, 14);
+            this.TxtAd.Name = "TxtAd";
+            this.TxtAd.Size = new System.Drawing.Size(173, 30);
+            this.TxtAd.TabIndex = 6;
             // 
-            // textBox2
+            // TxtSoyad
             // 
-            this.textBox2.Location = new System.Drawing.Point(161, 50);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(173, 30);
-            this.textBox2.TabIndex = 7;
+            this.TxtSoyad.Location = new System.Drawing.Point(161, 50);
+            this.TxtSoyad.Name = "TxtSoyad";
+            this.TxtSoyad.Size = new System.Drawing.Size(173, 30);
+            this.TxtSoyad.TabIndex = 7;
             // 
-            // maskedTextBox1
+            // MskTC
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(161, 86);
-            this.maskedTextBox1.Mask = "00000000000";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(173, 30);
-            this.maskedTextBox1.TabIndex = 8;
-            this.maskedTextBox1.ValidatingType = typeof(int);
+            this.MskTC.Location = new System.Drawing.Point(161, 86);
+            this.MskTC.Mask = "00000000000";
+            this.MskTC.Name = "MskTC";
+            this.MskTC.Size = new System.Drawing.Size(173, 30);
+            this.MskTC.TabIndex = 8;
+            this.MskTC.ValidatingType = typeof(int);
             // 
-            // maskedTextBox2
+            // MskTelefon
             // 
-            this.maskedTextBox2.Location = new System.Drawing.Point(161, 122);
-            this.maskedTextBox2.Mask = "(999) 000-0000";
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(173, 30);
-            this.maskedTextBox2.TabIndex = 9;
+            this.MskTelefon.Location = new System.Drawing.Point(161, 122);
+            this.MskTelefon.Mask = "(999) 000-0000";
+            this.MskTelefon.Name = "MskTelefon";
+            this.MskTelefon.Size = new System.Drawing.Size(173, 30);
+            this.MskTelefon.TabIndex = 9;
             // 
-            // textBox3
+            // TxtSifre
             // 
-            this.textBox3.Location = new System.Drawing.Point(161, 158);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(173, 30);
-            this.textBox3.TabIndex = 10;
+            this.TxtSifre.Location = new System.Drawing.Point(161, 158);
+            this.TxtSifre.Name = "TxtSifre";
+            this.TxtSifre.Size = new System.Drawing.Size(173, 30);
+            this.TxtSifre.TabIndex = 10;
+            this.TxtSifre.UseSystemPasswordChar = true;
             // 
-            // comboBox1
+            // CmbCinsiyet
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(161, 194);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(173, 32);
-            this.comboBox1.TabIndex = 11;
+            this.CmbCinsiyet.FormattingEnabled = true;
+            this.CmbCinsiyet.Items.AddRange(new object[] {
+            "Erkek",
+            "Kadın"});
+            this.CmbCinsiyet.Location = new System.Drawing.Point(161, 194);
+            this.CmbCinsiyet.Name = "CmbCinsiyet";
+            this.CmbCinsiyet.Size = new System.Drawing.Size(173, 32);
+            this.CmbCinsiyet.TabIndex = 11;
             // 
-            // button1
+            // BtnKayıtYap
             // 
-            this.button1.Location = new System.Drawing.Point(161, 232);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(173, 34);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "Kayıt Yap";
-            this.button1.UseVisualStyleBackColor = true;
+            this.BtnKayıtYap.Location = new System.Drawing.Point(161, 232);
+            this.BtnKayıtYap.Name = "BtnKayıtYap";
+            this.BtnKayıtYap.Size = new System.Drawing.Size(173, 34);
+            this.BtnKayıtYap.TabIndex = 12;
+            this.BtnKayıtYap.Text = "Kayıt Yap";
+            this.BtnKayıtYap.UseVisualStyleBackColor = true;
+            this.BtnKayıtYap.Click += new System.EventHandler(this.BtnKayıtYap_Click);
             // 
             // FrmHastaKayit
             // 
+            this.AcceptButton = this.BtnKayıtYap;
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.DarkGoldenrod;
             this.ClientSize = new System.Drawing.Size(358, 279);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.maskedTextBox2);
-            this.Controls.Add(this.maskedTextBox1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.BtnKayıtYap);
+            this.Controls.Add(this.CmbCinsiyet);
+            this.Controls.Add(this.TxtSifre);
+            this.Controls.Add(this.MskTelefon);
+            this.Controls.Add(this.MskTC);
+            this.Controls.Add(this.TxtSoyad);
+            this.Controls.Add(this.TxtAd);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -173,7 +181,9 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
             this.Name = "FrmHastaKayit";
             this.Text = "Hasta Kayıt";
             this.ResumeLayout(false);
@@ -189,12 +199,12 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox TxtAd;
+        private System.Windows.Forms.TextBox TxtSoyad;
+        private System.Windows.Forms.MaskedTextBox MskTC;
+        private System.Windows.Forms.MaskedTextBox MskTelefon;
+        private System.Windows.Forms.TextBox TxtSifre;
+        private System.Windows.Forms.ComboBox CmbCinsiyet;
+        private System.Windows.Forms.Button BtnKayıtYap;
     }
 }
