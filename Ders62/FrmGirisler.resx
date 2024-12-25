@@ -121,7 +121,7 @@
   <data name="BtnHasta.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DwAACw8BkvkDpQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAD8wSURBVHhe7d13
+        DgAACw4BQL7hQQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAD8wSURBVHhe7d13
         nFVVnu/9o3aw2w52GB073L5P9+2evnPt5+l7nbk9wYk9z8zcUaeDmMhJDA1UIGcQKBEUpFUyJiiyIAKK
         EUUFtFFRMXWbWiSKQlWR07prFZZC8a3iVO291t5nn88f71f36yehOGf91u+7z9khZ4wBUOA6dOn/pfZX
         9vuPtp36VrTp2Htpqw69nm/ZvucbLdv1fO+Ktj0+uLxNedVlrcv2XtKq9GCLliVHLr6iu7n4im7G/X9X
@@ -397,7 +397,7 @@
   <data name="BtnDoktor.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wAAADsABataJCQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAH7cSURBVHhe7b0H
+        vwAADr8BOAVTJAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAH7cSURBVHhe7b0H
         eBRHmv+/3nR3ezmHvbu9HH77v9u73dtbA7bBXq+9Xt96bS8CGxsbJJIkMNFgMAYkRM4555xzMJionMNM
         z0iakQSIjMjBgCT3v99RDYxa7+Senu6Z7+d5Ps/emamZUVd1vTXVVW99DQBgEsaN+/pP3h7w188lpDzX
         rkvKux0SUvq375wytn2X1LkdElI3tE9IPtw+IaVYsUbxguIND28qysIm8d8aFOm1DsUixULFI4qblfda
@@ -945,7 +945,7 @@
   <data name="BtnSekreter.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAgAAAAIACAYAAAD0eNT6AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        wAAADsABataJCQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAFcqSURBVHhe7b0H
+        vwAADr8BOAVTJAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAFcqSURBVHhe7b0H
         eBTZne499tq7a+/e9e693rWvd/fz3XD323v3cxyv7bUHPDOeHAAxaBiGAUnAaIakgAQCgaRGEqCEMkFC
         gSwQSELkJJBEzgMMOTOInJPUIpyvTqvEiNa/pe6udKrq/T3P7/GujVrdparzvl1V59QLAAAAAAAAAAAA
         AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
