@@ -37,6 +37,70 @@ namespace Derrs61
             SqlDataAdapter da = new SqlDataAdapter("Select * from Tbl_Branslar",bgl.baglanti());
             da.Fill(dt1);
             dataGridView1.DataSource = dt1;
+
+            DataTable dt2 = new DataTable();
+            SqlDataAdapter da2 = new SqlDataAdapter("Select (DoktorAd + ' ' + DoktorSoyad) as 'Doktorlar', DoktorBrans From Tbl_Doktorlar", bgl.baglanti());
+            da2.Fill(dt2);
+            dataGridView2.DataSource = dt2;
+
+            SqlCommand komut2 = new SqlCommand("Select BransAd From Tbl_Branslar", bgl.baglanti());
+            SqlDataReader dr2 = komut2.ExecuteReader();
+            while (dr2.Read())
+            {
+                CmbBrans.Items.Add(dr2[0]);
+            }
+            bgl.baglanti().Close();
         }
+
+        private void BtnKaydet_Click(object sender, EventArgs e)
+        {
+            SqlCommand komutkaydet = new SqlCommand("insert into Tbl_Randevular (RandevuTarih,RandevuSaat,RandevuBrans,RandevuDoktor) Values (@r1,@r2,@r3,@r4)", bgl.baglanti());
+            komutkaydet.Parameters.AddWithValue("@r1", MskTarih.Text);
+            komutkaydet.Parameters.AddWithValue("@r2", MskSaat.Text);
+            komutkaydet.Parameters.AddWithValue("@r3", CmbBrans.Text);
+            komutkaydet.Parameters.AddWithValue("@r4", CmbDoktor.Text);
+            komutkaydet.ExecuteNonQuery();
+            bgl.baglanti().Close();
+            MessageBox.Show("Randevu Oluşturuldu");
+        }
+
+        private void BtnOlustur_Click(object sender, EventArgs e)
+        {
+            SqlCommand komut = new SqlCommand("insert into Tbl_Duyurular (Duyuru) Values (@d1)", bgl.baglanti());
+            komut.Parameters.AddWithValue("@d1", RchDuyuru.Text);
+            komut.ExecuteNonQuery();
+            bgl.baglanti().Close();
+        }
+  private void CmbBrans_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            CmbDoktor.Items.Clear();
+            SqlCommand komut = new SqlCommand("Select DoktorAd,DoktorSoyad From Tbl_Doktorlar Where DoktorBrans=@p1", bgl.baglanti());
+            komut.Parameters.AddWithValue("@p1", CmbBrans.Text);
+            SqlDataReader dr = komut.ExecuteReader();
+            while (dr.Read())
+            {
+                CmbDoktor.Items.Add(dr[0] + " " + dr[1]);
+            }
+            bgl.baglanti().Close();
+        }
+        private void BtnDoktorPaneli_Click(object sender, EventArgs e)
+        {
+            FrmDoktorPaneli drp = new FrmDoktorPaneli();
+            drp.Show();
+        }
+
+        private void BtnBransPaneli_Click(object sender, EventArgs e)
+        {
+            FrmBrans frmBran = new FrmBrans();
+            frmBran.Show();
+        }
+
+        private void BtnRandevuPaneli_Click(object sender, EventArgs e)
+        {
+            FrmRandevu frl = new FrmRandevu();
+            frl.Show();
+        }
+
+      
     }
 }
