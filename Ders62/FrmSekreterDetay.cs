@@ -101,6 +101,38 @@ namespace Derrs61
             frl.Show();
         }
 
-      
+        private void BtnDuyurular_Click(object sender, EventArgs e)
+        {
+            FrmDuyurular fr = new FrmDuyurular();
+            fr.Show();
+        }
+
+        private void BtnGetir_Click(object sender, EventArgs e)
+        {
+            SqlCommand komut = new SqlCommand("Select * From Tbl_Randevular Where Randevuid=@p1", bgl.baglanti());
+            komut.Parameters.AddWithValue("@p1", Txtİd.Text);
+            SqlDataReader dr = komut.ExecuteReader();
+            while (dr.Read())
+            {
+                MskTarih.Text = dr[1].ToString();
+                MskSaat.Text = dr[2].ToString();
+                CmbBrans.Text = dr[3].ToString();
+                CmbDoktor.Text = dr[4].ToString();
+                ChkDurum.Checked = dr[5].ToString() == "True";
+                MskTC.Text = dr[6].ToString();
+                RchSikayet.Text = dr[7].ToString();
+            }
+            bgl.baglanti().Close();
+        }
+
+        private void BtnGüncelle_Click(object sender, EventArgs e)
+        {
+            SqlCommand komut2 = new SqlCommand("Update Tbl_Randevular Set HastaTC=NULL, HastaSikayet=NULL, Randevudurum=@p1 Where Randevuid=@p2", bgl.baglanti());
+            komut2.Parameters.AddWithValue("@p1", ChkDurum.Checked);
+            komut2.Parameters.AddWithValue("@p2", Txtİd.Text);
+            komut2.ExecuteNonQuery();
+            bgl.baglanti().Close();
+            MessageBox.Show("Bilgileriniz Güncellendi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+        }
     }
 }

@@ -46,7 +46,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.BtnGüncelle = new System.Windows.Forms.Button();
             this.BtnKaydet = new System.Windows.Forms.Button();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.ChkDurum = new System.Windows.Forms.CheckBox();
             this.MskTC = new System.Windows.Forms.MaskedTextBox();
             this.CmbDoktor = new System.Windows.Forms.ComboBox();
             this.CmbBrans = new System.Windows.Forms.ComboBox();
@@ -58,9 +58,13 @@
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.BtnDuyurular = new System.Windows.Forms.Button();
             this.BtnRandevuPaneli = new System.Windows.Forms.Button();
             this.BtnBransPaneli = new System.Windows.Forms.Button();
             this.BtnDoktorPaneli = new System.Windows.Forms.Button();
+            this.BtnGetir = new System.Windows.Forms.Button();
+            this.RchSikayet = new System.Windows.Forms.RichTextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -151,6 +155,9 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.label3);
+            this.groupBox3.Controls.Add(this.RchSikayet);
+            this.groupBox3.Controls.Add(this.BtnGetir);
             this.groupBox3.Controls.Add(this.label10);
             this.groupBox3.Controls.Add(this.label9);
             this.groupBox3.Controls.Add(this.label8);
@@ -159,7 +166,7 @@
             this.groupBox3.Controls.Add(this.label5);
             this.groupBox3.Controls.Add(this.BtnGüncelle);
             this.groupBox3.Controls.Add(this.BtnKaydet);
-            this.groupBox3.Controls.Add(this.checkBox1);
+            this.groupBox3.Controls.Add(this.ChkDurum);
             this.groupBox3.Controls.Add(this.MskTC);
             this.groupBox3.Controls.Add(this.CmbDoktor);
             this.groupBox3.Controls.Add(this.CmbBrans);
@@ -176,7 +183,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(41, 222);
+            this.label10.Location = new System.Drawing.Point(45, 212);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(38, 18);
             this.label10.TabIndex = 14;
@@ -185,7 +192,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(3, 184);
+            this.label9.Location = new System.Drawing.Point(17, 174);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(66, 18);
             this.label9.TabIndex = 13;
@@ -194,7 +201,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(14, 146);
+            this.label8.Location = new System.Drawing.Point(25, 136);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(58, 18);
             this.label8.TabIndex = 12;
@@ -203,7 +210,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(28, 110);
+            this.label7.Location = new System.Drawing.Point(35, 100);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(48, 18);
             this.label7.TabIndex = 11;
@@ -212,7 +219,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(18, 74);
+            this.label6.Location = new System.Drawing.Point(27, 64);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(56, 18);
             this.label6.TabIndex = 10;
@@ -221,7 +228,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(47, 38);
+            this.label5.Location = new System.Drawing.Point(50, 28);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(33, 18);
             this.label5.TabIndex = 9;
@@ -229,36 +236,37 @@
             // 
             // BtnGüncelle
             // 
-            this.BtnGüncelle.Location = new System.Drawing.Point(93, 328);
+            this.BtnGüncelle.Location = new System.Drawing.Point(95, 354);
             this.BtnGüncelle.Name = "BtnGüncelle";
-            this.BtnGüncelle.Size = new System.Drawing.Size(176, 33);
+            this.BtnGüncelle.Size = new System.Drawing.Size(84, 33);
             this.BtnGüncelle.TabIndex = 8;
             this.BtnGüncelle.Text = "Güncelle";
             this.BtnGüncelle.UseVisualStyleBackColor = true;
+            this.BtnGüncelle.Click += new System.EventHandler(this.BtnGüncelle_Click);
             // 
             // BtnKaydet
             // 
-            this.BtnKaydet.Location = new System.Drawing.Point(93, 289);
+            this.BtnKaydet.Location = new System.Drawing.Point(6, 354);
             this.BtnKaydet.Name = "BtnKaydet";
-            this.BtnKaydet.Size = new System.Drawing.Size(176, 33);
+            this.BtnKaydet.Size = new System.Drawing.Size(84, 33);
             this.BtnKaydet.TabIndex = 7;
             this.BtnKaydet.Text = "Kaydet";
             this.BtnKaydet.UseVisualStyleBackColor = true;
             this.BtnKaydet.Click += new System.EventHandler(this.BtnKaydet_Click);
             // 
-            // checkBox1
+            // ChkDurum
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(93, 255);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(77, 22);
-            this.checkBox1.TabIndex = 6;
-            this.checkBox1.Text = "Durum";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.ChkDurum.AutoSize = true;
+            this.ChkDurum.Location = new System.Drawing.Point(93, 325);
+            this.ChkDurum.Name = "ChkDurum";
+            this.ChkDurum.Size = new System.Drawing.Size(77, 22);
+            this.ChkDurum.TabIndex = 6;
+            this.ChkDurum.Text = "Durum";
+            this.ChkDurum.UseVisualStyleBackColor = true;
             // 
             // MskTC
             // 
-            this.MskTC.Location = new System.Drawing.Point(93, 219);
+            this.MskTC.Location = new System.Drawing.Point(93, 209);
             this.MskTC.Mask = "00000000000";
             this.MskTC.Name = "MskTC";
             this.MskTC.Size = new System.Drawing.Size(176, 26);
@@ -268,7 +276,7 @@
             // CmbDoktor
             // 
             this.CmbDoktor.FormattingEnabled = true;
-            this.CmbDoktor.Location = new System.Drawing.Point(93, 181);
+            this.CmbDoktor.Location = new System.Drawing.Point(93, 171);
             this.CmbDoktor.Name = "CmbDoktor";
             this.CmbDoktor.Size = new System.Drawing.Size(176, 26);
             this.CmbDoktor.TabIndex = 4;
@@ -276,7 +284,7 @@
             // CmbBrans
             // 
             this.CmbBrans.FormattingEnabled = true;
-            this.CmbBrans.Location = new System.Drawing.Point(93, 143);
+            this.CmbBrans.Location = new System.Drawing.Point(93, 133);
             this.CmbBrans.Name = "CmbBrans";
             this.CmbBrans.Size = new System.Drawing.Size(176, 26);
             this.CmbBrans.TabIndex = 3;
@@ -284,7 +292,7 @@
             // 
             // MskSaat
             // 
-            this.MskSaat.Location = new System.Drawing.Point(93, 107);
+            this.MskSaat.Location = new System.Drawing.Point(93, 97);
             this.MskSaat.Mask = "00:00";
             this.MskSaat.Name = "MskSaat";
             this.MskSaat.Size = new System.Drawing.Size(176, 26);
@@ -293,7 +301,7 @@
             // 
             // MskTarih
             // 
-            this.MskTarih.Location = new System.Drawing.Point(93, 71);
+            this.MskTarih.Location = new System.Drawing.Point(93, 61);
             this.MskTarih.Mask = "00/00/0000";
             this.MskTarih.Name = "MskTarih";
             this.MskTarih.Size = new System.Drawing.Size(176, 26);
@@ -302,7 +310,7 @@
             // 
             // Txtİd
             // 
-            this.Txtİd.Location = new System.Drawing.Point(93, 35);
+            this.Txtİd.Location = new System.Drawing.Point(93, 25);
             this.Txtİd.Name = "Txtİd";
             this.Txtİd.Size = new System.Drawing.Size(176, 26);
             this.Txtİd.TabIndex = 0;
@@ -353,6 +361,7 @@
             // 
             // groupBox6
             // 
+            this.groupBox6.Controls.Add(this.BtnDuyurular);
             this.groupBox6.Controls.Add(this.BtnRandevuPaneli);
             this.groupBox6.Controls.Add(this.BtnBransPaneli);
             this.groupBox6.Controls.Add(this.BtnDoktorPaneli);
@@ -363,11 +372,21 @@
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Hızlı Erişim";
             // 
+            // BtnDuyurular
+            // 
+            this.BtnDuyurular.Location = new System.Drawing.Point(428, 25);
+            this.BtnDuyurular.Name = "BtnDuyurular";
+            this.BtnDuyurular.Size = new System.Drawing.Size(128, 36);
+            this.BtnDuyurular.TabIndex = 3;
+            this.BtnDuyurular.Text = "Duyurular";
+            this.BtnDuyurular.UseVisualStyleBackColor = true;
+            this.BtnDuyurular.Click += new System.EventHandler(this.BtnDuyurular_Click);
+            // 
             // BtnRandevuPaneli
             // 
-            this.BtnRandevuPaneli.Location = new System.Drawing.Point(392, 25);
+            this.BtnRandevuPaneli.Location = new System.Drawing.Point(294, 25);
             this.BtnRandevuPaneli.Name = "BtnRandevuPaneli";
-            this.BtnRandevuPaneli.Size = new System.Drawing.Size(161, 36);
+            this.BtnRandevuPaneli.Size = new System.Drawing.Size(128, 36);
             this.BtnRandevuPaneli.TabIndex = 2;
             this.BtnRandevuPaneli.Text = "Randevu Paneli";
             this.BtnRandevuPaneli.UseVisualStyleBackColor = true;
@@ -375,9 +394,9 @@
             // 
             // BtnBransPaneli
             // 
-            this.BtnBransPaneli.Location = new System.Drawing.Point(215, 25);
+            this.BtnBransPaneli.Location = new System.Drawing.Point(160, 25);
             this.BtnBransPaneli.Name = "BtnBransPaneli";
-            this.BtnBransPaneli.Size = new System.Drawing.Size(161, 36);
+            this.BtnBransPaneli.Size = new System.Drawing.Size(128, 36);
             this.BtnBransPaneli.TabIndex = 1;
             this.BtnBransPaneli.Text = "Branş Paneli";
             this.BtnBransPaneli.UseVisualStyleBackColor = true;
@@ -385,13 +404,40 @@
             // 
             // BtnDoktorPaneli
             // 
-            this.BtnDoktorPaneli.Location = new System.Drawing.Point(38, 25);
+            this.BtnDoktorPaneli.Location = new System.Drawing.Point(26, 25);
             this.BtnDoktorPaneli.Name = "BtnDoktorPaneli";
-            this.BtnDoktorPaneli.Size = new System.Drawing.Size(161, 36);
+            this.BtnDoktorPaneli.Size = new System.Drawing.Size(128, 36);
             this.BtnDoktorPaneli.TabIndex = 0;
             this.BtnDoktorPaneli.Text = "Doktor Paneli";
             this.BtnDoktorPaneli.UseVisualStyleBackColor = true;
             this.BtnDoktorPaneli.Click += new System.EventHandler(this.BtnDoktorPaneli_Click);
+            // 
+            // BtnGetir
+            // 
+            this.BtnGetir.Location = new System.Drawing.Point(185, 354);
+            this.BtnGetir.Name = "BtnGetir";
+            this.BtnGetir.Size = new System.Drawing.Size(84, 33);
+            this.BtnGetir.TabIndex = 15;
+            this.BtnGetir.Text = "Getir";
+            this.BtnGetir.UseVisualStyleBackColor = true;
+            this.BtnGetir.Click += new System.EventHandler(this.BtnGetir_Click);
+            // 
+            // RchSikayet
+            // 
+            this.RchSikayet.Location = new System.Drawing.Point(93, 241);
+            this.RchSikayet.Name = "RchSikayet";
+            this.RchSikayet.Size = new System.Drawing.Size(176, 78);
+            this.RchSikayet.TabIndex = 16;
+            this.RchSikayet.Text = "";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(13, 246);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(70, 18);
+            this.label3.TabIndex = 17;
+            this.label3.Text = "Şikayet :";
             // 
             // FrmSekreterDetay
             // 
@@ -440,7 +486,7 @@
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button BtnGüncelle;
         private System.Windows.Forms.Button BtnKaydet;
-        private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.CheckBox ChkDurum;
         private System.Windows.Forms.MaskedTextBox MskTC;
         private System.Windows.Forms.ComboBox CmbDoktor;
         private System.Windows.Forms.ComboBox CmbBrans;
@@ -461,5 +507,9 @@
         private System.Windows.Forms.Button BtnRandevuPaneli;
         private System.Windows.Forms.Button BtnBransPaneli;
         private System.Windows.Forms.Button BtnDoktorPaneli;
+        private System.Windows.Forms.Button BtnDuyurular;
+        private System.Windows.Forms.Button BtnGetir;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.RichTextBox RchSikayet;
     }
 }

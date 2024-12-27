@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmBilgiDüzenle));
             this.BtnBlgiGüncelle = new System.Windows.Forms.Button();
             this.CmbCinsiyet = new System.Windows.Forms.ComboBox();
             this.TxtSifre = new System.Windows.Forms.TextBox();
@@ -160,6 +161,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.Goldenrod;
             this.ClientSize = new System.Drawing.Size(354, 276);
             this.Controls.Add(this.BtnBlgiGüncelle);
@@ -176,7 +178,9 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximizeBox = false;
             this.Name = "FrmBilgiDüzenle";
             this.Text = "Bilgi Güncelleme";
             this.Load += new System.EventHandler(this.FrmBilgiDüzenle_Load);
