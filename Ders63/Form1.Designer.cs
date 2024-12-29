@@ -36,11 +36,11 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.Txtid = new System.Windows.Forms.TextBox();
+            this.TxtAd = new System.Windows.Forms.TextBox();
+            this.TxtYazar = new System.Windows.Forms.TextBox();
+            this.TxtSayfa = new System.Windows.Forms.TextBox();
+            this.CmbTur = new System.Windows.Forms.ComboBox();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.button1 = new System.Windows.Forms.Button();
@@ -62,6 +62,7 @@
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(800, 245);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // label1
             // 
@@ -117,63 +118,72 @@
             this.label6.TabIndex = 6;
             this.label6.Text = "Durum:";
             // 
-            // textBox1
+            // Txtid
             // 
-            this.textBox1.Location = new System.Drawing.Point(99, 25);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(211, 26);
-            this.textBox1.TabIndex = 7;
+            this.Txtid.Enabled = false;
+            this.Txtid.Location = new System.Drawing.Point(99, 22);
+            this.Txtid.Name = "Txtid";
+            this.Txtid.Size = new System.Drawing.Size(211, 26);
+            this.Txtid.TabIndex = 7;
             // 
-            // textBox2
+            // TxtAd
             // 
-            this.textBox2.Location = new System.Drawing.Point(99, 61);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(211, 26);
-            this.textBox2.TabIndex = 8;
+            this.TxtAd.Location = new System.Drawing.Point(99, 58);
+            this.TxtAd.Name = "TxtAd";
+            this.TxtAd.Size = new System.Drawing.Size(211, 26);
+            this.TxtAd.TabIndex = 8;
             // 
-            // textBox3
+            // TxtYazar
             // 
-            this.textBox3.Location = new System.Drawing.Point(99, 97);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(211, 26);
-            this.textBox3.TabIndex = 9;
+            this.TxtYazar.Location = new System.Drawing.Point(99, 94);
+            this.TxtYazar.Name = "TxtYazar";
+            this.TxtYazar.Size = new System.Drawing.Size(211, 26);
+            this.TxtYazar.TabIndex = 9;
             // 
-            // textBox4
+            // TxtSayfa
             // 
-            this.textBox4.Location = new System.Drawing.Point(99, 133);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(211, 26);
-            this.textBox4.TabIndex = 10;
+            this.TxtSayfa.Location = new System.Drawing.Point(99, 130);
+            this.TxtSayfa.Name = "TxtSayfa";
+            this.TxtSayfa.Size = new System.Drawing.Size(211, 26);
+            this.TxtSayfa.TabIndex = 10;
             // 
-            // comboBox1
+            // CmbTur
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(99, 169);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(211, 26);
-            this.comboBox1.TabIndex = 11;
+            this.CmbTur.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CmbTur.FormattingEnabled = true;
+            this.CmbTur.Items.AddRange(new object[] {
+            "Roman",
+            "Tiyatro",
+            "Hikaye",
+            "Şiir"});
+            this.CmbTur.Location = new System.Drawing.Point(99, 166);
+            this.CmbTur.Name = "CmbTur";
+            this.CmbTur.Size = new System.Drawing.Size(211, 26);
+            this.CmbTur.TabIndex = 11;
             // 
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
             this.radioButton1.Location = new System.Drawing.Point(99, 205);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(104, 22);
+            this.radioButton1.Size = new System.Drawing.Size(84, 22);
             this.radioButton1.TabIndex = 12;
             this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Kullanılmış";
+            this.radioButton1.Text = "İkinci El";
             this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
             this.radioButton2.Location = new System.Drawing.Point(209, 205);
             this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(55, 22);
+            this.radioButton2.Size = new System.Drawing.Size(75, 22);
             this.radioButton2.TabIndex = 13;
             this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Sıfır";
+            this.radioButton2.Text = "Paketli";
             this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
             // button1
             // 
@@ -183,6 +193,7 @@
             this.button1.TabIndex = 14;
             this.button1.Text = "Listele";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -192,6 +203,7 @@
             this.button2.TabIndex = 15;
             this.button2.Text = "Kaydet";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -201,6 +213,7 @@
             this.button3.TabIndex = 16;
             this.button3.Text = "Sil";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button4
             // 
@@ -234,11 +247,11 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.radioButton2);
             this.Controls.Add(this.radioButton1);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox4);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.CmbTur);
+            this.Controls.Add(this.TxtSayfa);
+            this.Controls.Add(this.TxtYazar);
+            this.Controls.Add(this.TxtAd);
+            this.Controls.Add(this.Txtid);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -267,11 +280,11 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox Txtid;
+        private System.Windows.Forms.TextBox TxtAd;
+        private System.Windows.Forms.TextBox TxtYazar;
+        private System.Windows.Forms.TextBox TxtSayfa;
+        private System.Windows.Forms.ComboBox CmbTur;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.Button button1;
