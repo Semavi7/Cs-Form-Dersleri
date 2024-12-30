@@ -91,5 +91,48 @@ namespace Ders63
             MessageBox.Show("Kitap Listeden Silindi", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             listele();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            baglanti.Open();
+            OleDbCommand komut = new OleDbCommand("update kitaplar set kitapad=@p1,yazar=@p2,tur=@p3,[sayfa sayısı]=@p4,durum=@p5 where kitapid=@6", baglanti);
+            komut.Parameters.AddWithValue("@p1", TxtAd.Text);
+            komut.Parameters.AddWithValue("@p2", TxtYazar.Text);
+            komut.Parameters.AddWithValue("@p3", CmbTur.Text);
+            komut.Parameters.AddWithValue("@p4", TxtSayfa.Text);
+            if (radioButton1.Checked == true)
+            {
+                komut.Parameters.AddWithValue("@p5", durum);
+            }
+            if (radioButton2.Checked == true)
+            {
+                komut.Parameters.AddWithValue("@p5", durum);
+            }
+            komut.Parameters.AddWithValue("@p6", Txtid.Text);
+            komut.ExecuteNonQuery();
+            baglanti.Close();
+            MessageBox.Show("Kayıt Güncellendi", "Uyarı", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            listele();
+        }
+
+        private void btnBul_Click(object sender, EventArgs e)
+        {
+            OleDbCommand komut = new OleDbCommand("Select * From Kitaplar Where KitapAd=@p1", baglanti);
+            komut.Parameters.AddWithValue("@p1", TxtKitapBul.Text);
+            DataTable dt = new DataTable();
+            OleDbDataAdapter da = new OleDbDataAdapter(komut);
+            da.Fill(dt);
+            dataGridView1.DataSource = dt;
+        }
+
+        private void TxtKitapBul_TextChanged(object sender, EventArgs e)
+        {
+            OleDbCommand komut = new OleDbCommand("Select * From Kitaplar Where KitapAd like '" + TxtKitapBul.Text + "%'", baglanti);
+            DataTable dt = new DataTable();
+            OleDbDataAdapter da = new OleDbDataAdapter(komut);
+            da.Fill(dt);
+            dataGridView1.DataSource = dt;
+            
+        }
     }
 }
