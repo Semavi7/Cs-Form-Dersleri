@@ -27,5 +27,17 @@ namespace Ders66
         {
             Application.Exit();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frmdersler fr = new frmdersler();
+            fr.Show();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            frmogrenci fr = new frmogrenci();
+            fr.Show();
+        }
     }
 }
