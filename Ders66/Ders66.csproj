@@ -46,6 +46,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataSet1.cs">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DataSet1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -87,6 +90,12 @@
     <Compile Include="frmogretmen.Designer.cs">
       <DependentUpon>frmogretmen.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmsınavnotlar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmsınavnotlar.Designer.cs">
+      <DependentUpon>frmsınavnotlar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
@@ -106,6 +115,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmogretmen.resx">
       <DependentUpon>frmogretmen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmsınavnotlar.resx">
+      <DependentUpon>frmsınavnotlar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

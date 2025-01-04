@@ -39,5 +39,11 @@ namespace Ders66
             frmogrenci fr = new frmogrenci();
             fr.Show();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            frmsınavnotlar fr = new frmsınavnotlar();
+            fr.Show();
+        }
     }
 }
