@@ -31,6 +31,7 @@
             this.BtnKategori = new System.Windows.Forms.Button();
             this.BtnUrun = new System.Windows.Forms.Button();
             this.BtnIst = new System.Windows.Forms.Button();
+            this.BtnMusteri = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // BtnKategori
@@ -55,7 +56,7 @@
             // 
             // BtnIst
             // 
-            this.BtnIst.Location = new System.Drawing.Point(382, 12);
+            this.BtnIst.Location = new System.Drawing.Point(567, 12);
             this.BtnIst.Name = "BtnIst";
             this.BtnIst.Size = new System.Drawing.Size(179, 128);
             this.BtnIst.TabIndex = 2;
@@ -63,12 +64,23 @@
             this.BtnIst.UseVisualStyleBackColor = true;
             this.BtnIst.Click += new System.EventHandler(this.BtnIst_Click);
             // 
+            // BtnMusteri
+            // 
+            this.BtnMusteri.Location = new System.Drawing.Point(382, 12);
+            this.BtnMusteri.Name = "BtnMusteri";
+            this.BtnMusteri.Size = new System.Drawing.Size(179, 128);
+            this.BtnMusteri.TabIndex = 3;
+            this.BtnMusteri.Text = "MÜŞTERİ\r\nİŞLEMLERİ";
+            this.BtnMusteri.UseVisualStyleBackColor = true;
+            this.BtnMusteri.Click += new System.EventHandler(this.BtnMusteri_Click);
+            // 
             // frmanaform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(574, 168);
+            this.ClientSize = new System.Drawing.Size(761, 153);
+            this.Controls.Add(this.BtnMusteri);
             this.Controls.Add(this.BtnIst);
             this.Controls.Add(this.BtnUrun);
             this.Controls.Add(this.BtnKategori);
@@ -78,7 +90,7 @@
             this.MinimizeBox = false;
             this.Name = "frmanaform";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmanaform";
+            this.Text = "GİRİŞ";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmanaform_FormClosed);
             this.ResumeLayout(false);
 
@@ -89,5 +101,6 @@
         private System.Windows.Forms.Button BtnKategori;
         private System.Windows.Forms.Button BtnUrun;
         private System.Windows.Forms.Button BtnIst;
+        private System.Windows.Forms.Button BtnMusteri;
     }
 }

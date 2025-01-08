@@ -39,5 +39,11 @@ namespace Ders67
         {
             Application.Exit();
         }
+
+        private void BtnMusteri_Click(object sender, EventArgs e)
+        {
+            frmmüsteri fr = new frmmüsteri();
+            fr.Show();
+        }
     }
 }

@@ -79,6 +79,12 @@
     <Compile Include="frmkategori.Designer.cs">
       <DependentUpon>frmkategori.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmmüsteri.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmmüsteri.Designer.cs">
+      <DependentUpon>frmmüsteri.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmurun.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,6 +134,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmkategori.resx">
       <DependentUpon>frmkategori.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmmüsteri.resx">
+      <DependentUpon>frmmüsteri.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmurun.resx">
       <DependentUpon>frmurun.cs</DependentUpon>
