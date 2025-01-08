@@ -4,7 +4,15 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="DbEntityUrunModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="DbEntityUrunModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="TBLADMIN">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="tinyint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="KULLANICI" Type="varchar" MaxLength="20" />
+          <Property Name="SIFRE" Type="varchar" MaxLength="20" />
+        </EntityType>
         <EntityType Name="TBLKATEGORI">
           <Key>
             <PropertyRef Name="ID" />
@@ -20,6 +28,7 @@
           <Property Name="MUSTERIAD" Type="varchar" MaxLength="30" />
           <Property Name="MUSTERISOYAD" Type="varchar" MaxLength="30" />
           <Property Name="SEHIR" Type="varchar" MaxLength="15" />
+          <Property Name="DURUM" Type="bit" />
         </EntityType>
         <EntityType Name="TBLSATIS">
           <Key>
@@ -79,7 +88,9 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Function Name="MARKAGETIR" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <EntityContainer Name="DbEntityUrunModelStoreContainer">
+          <EntitySet Name="TBLADMIN" EntityType="Self.TBLADMIN" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBLKATEGORI" EntityType="Self.TBLKATEGORI" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBLMUSTERI" EntityType="Self.TBLMUSTERI" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="TBLSATIS" EntityType="Self.TBLSATIS" Schema="dbo" store:Type="Tables" />
@@ -97,8 +108,7 @@
             <End Role="TBLURUN" EntitySet="TBLURUN" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="DbEntityUrunModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -119,6 +129,7 @@
           <Property Name="MUSTERISOYAD" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
           <Property Name="SEHIR" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="TBLSATIS" Relationship="Self.FK_TBLSATIS_TBLMUSTERI" FromRole="TBLMUSTERI" ToRole="TBLSATIS" />
+          <Property Name="DURUM" Type="Boolean" />
         </EntityType>
         <EntityType Name="TBLSATIS">
           <Key>
@@ -199,7 +210,17 @@
             <End Role="TBLURUN" EntitySet="TBLURUN" />
             <End Role="TBLSATIS" EntitySet="TBLSATIS" />
           </AssociationSet>
+          <FunctionImport Name="MARKAGETIR" ReturnType="Collection(String)" />
+          <EntitySet Name="TBLADMIN" EntityType="DbEntityUrunModel.TBLADMIN" />
         </EntityContainer>
+        <EntityType Name="TBLADMIN">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="KULLANICI" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="SIFRE" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -217,6 +238,7 @@
           <EntitySetMapping Name="TBLMUSTERI">
             <EntityTypeMapping TypeName="DbEntityUrunModel.TBLMUSTERI">
               <MappingFragment StoreEntitySet="TBLMUSTERI">
+                <ScalarProperty Name="DURUM" ColumnName="DURUM" />
                 <ScalarProperty Name="MUSTERIID" ColumnName="MUSTERIID" />
                 <ScalarProperty Name="MUSTERIAD" ColumnName="MUSTERIAD" />
                 <ScalarProperty Name="MUSTERISOYAD" ColumnName="MUSTERISOYAD" />
@@ -245,6 +267,16 @@
                 <ScalarProperty Name="FIYAT" ColumnName="FIYAT" />
                 <ScalarProperty Name="DURUM" ColumnName="DURUM" />
                 <ScalarProperty Name="KATEGORI" ColumnName="KATEGORI" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="MARKAGETIR" FunctionName="DbEntityUrunModel.Store.MARKAGETIR" />
+          <EntitySetMapping Name="TBLADMIN">
+            <EntityTypeMapping TypeName="DbEntityUrunModel.TBLADMIN">
+              <MappingFragment StoreEntitySet="TBLADMIN">
+                <ScalarProperty Name="SIFRE" ColumnName="SIFRE" />
+                <ScalarProperty Name="KULLANICI" ColumnName="KULLANICI" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

@@ -16,7 +16,7 @@ namespace Ders67
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmanaform());
+            Application.Run(new frmgiris());
         }
     }
 }

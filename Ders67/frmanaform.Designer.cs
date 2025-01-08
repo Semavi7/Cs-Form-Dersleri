@@ -61,6 +61,7 @@
             this.BtnIst.TabIndex = 2;
             this.BtnIst.Text = "İSTATİSLİKLER";
             this.BtnIst.UseVisualStyleBackColor = true;
+            this.BtnIst.Click += new System.EventHandler(this.BtnIst_Click);
             // 
             // frmanaform
             // 
@@ -72,12 +73,13 @@
             this.Controls.Add(this.BtnUrun);
             this.Controls.Add(this.BtnKategori);
             this.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmanaform";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmanaform";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmanaform_FormClosed);
             this.ResumeLayout(false);
 
         }

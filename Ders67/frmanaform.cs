@@ -28,5 +28,16 @@ namespace Ders67
             frmurun fr = new frmurun();
             fr.Show();
         }
+
+        private void BtnIst_Click(object sender, EventArgs e)
+        {
+            frmistatislik fr = new frmistatislik();
+            fr.Show();
+        }
+
+        private void frmanaform_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
